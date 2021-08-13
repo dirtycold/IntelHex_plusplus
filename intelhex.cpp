@@ -216,7 +216,7 @@ void IntelHex::tobinfile(ostream & file, OptionalAddr start, OptionalAddr end, O
 }
 void IntelHex::tobinfile(const string &fileName, OptionalAddr start, OptionalAddr end, OptionalAddr size) const
 {
-	ofstream file(fileName);
+	ofstream file(fileName, std::ios::binary);
 	tobinfile(file, start, end, size);
 }
 
